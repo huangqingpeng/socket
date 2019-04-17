@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <div>
+        websocket
+    </div>
+    <h1>websocket聊天室</h1>
+    <div id='room' style='width:400px;height:300px;over-y:auto;border:1px solid #ddd;'>
+
+    </div>
+    <input type='text' name='say' id='say' value='' />
+
+    <input type="button" name='send' id='send' value="发送">
+
+    <script src="./wssocketClient.js"></script>
+    <script>
+        // let say = document.querySelector("#say")
+        // let say = document.querySelector("#say")
+        document.onkeyup = e => {
+            if (e.keyCode == 13) {
+
+            }
+        }
+        send.onclick = () => {
+            sendmsg()
+        }
+
+        function sendmsg() {
+            console.log(say.value)
+            ws.send(say.value)
+        }
+    </script>
+</body>
+
+</html>
