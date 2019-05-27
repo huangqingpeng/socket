@@ -37,6 +37,7 @@ let onlinecount = 0
 
 let i = 0
 
+//监听客户端连接
 io.on('connection', so => {
     console.log('欢迎新用户的加入')
     so.name = ++i

@@ -8,12 +8,14 @@ ws.onopen = () => {
     //ws.send('hollow word')
 }
 
+//接受服务器发送数据
 ws.onmessage = e => {
     console.log(e.data);
     let chatroom = document.querySelector('#room')
     chatroom.innerHTML += e.data + '<br />'
 }
 
+//监听服务关闭
 ws.onclose = () => {
     console.log('‘服务关闭’')
 }

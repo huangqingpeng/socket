@@ -11,7 +11,7 @@ let wss = new WebSocketServer({
 let clientMap = new Object()
 
 let i = 0
-
+    //监听客户端上线
 wss.on('connection', (ws) => {
     console.log(ws + '上线')
     ws.name = ++i
@@ -26,6 +26,7 @@ wss.on('connection', (ws) => {
         // ws.send('你好')
 })
 
+//存放数据
 function broadcast(msg, ws) {
     for (let key in clientMap) {
         clientMap[key].send(ws.name + '说：' + msg)
